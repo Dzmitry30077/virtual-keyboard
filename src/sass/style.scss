@@ -1,0 +1,90 @@
+@import 'normalize.css';
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: wheat;
+  background-color: #242424;
+}
+
+.wrapper {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;  
+}
+
+.textarea {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: rgb(48, 48, 48);
+  color: wheat;
+  resize: none;
+}
+
+.keyboard {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 1.6rem;
+
+  &__key {
+    min-width: 70px;
+    height: 60px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(73, 73, 73);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &.active {
+      background-color: brown;
+      box-shadow: 0px 0px 10px 2px rgba(168, 79, 79, 0.5);
+    }
+    &:active {
+      background-color: brown;
+    }
+    &:hover {
+      box-shadow: 0px 0px 10px 2px rgba(168, 79, 79, 0.5);
+    }
+
+    &#Backspace {
+      flex-grow: 1;
+    }
+    &#Tab {
+      min-width: 125px;
+    }
+    &#Backslash {
+      min-width: 125px;
+    }
+    &#Enter {
+      min-width: 180px;
+    }
+    &#ShiftLeft {
+      min-width: 215px;
+    }
+    &#ControlLeft, &#ControlRight {
+      min-width: 100px;
+    }
+    &#AltLeft, &#AltRight {
+      min-width: 100px;
+    }
+    &#Space {
+      min-width: 425px;
+    }
+  }
+}
